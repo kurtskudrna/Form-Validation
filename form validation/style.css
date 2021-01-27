@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+:root {
+    --validColor: green;
+    --notValidColor: red; 
+}
+* {
+    box-sizing: border-box; 
+}
+
+body {
+    background-color: bisque;
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 1px 5px rgba(0,0,0, 0.5);
+    width: 400px;
+}
+h2 {
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+.form {
+    padding: 30px 40px;
+}
+
+.form-content {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.form-content label {
+    color:rgb(37, 37, 37);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-content input {
+    border: 2px solid rgb(211, 211, 211);
+    border-radius: 3px;
+    display: block;
+    font-size: 16px;
+    padding:12px;
+    width: 100%;
+}
+
+.form-content input:focus {
+    outline: 0;
+    border-color: rgb(37,37,37);
+}
+
+.form-content.valid input {
+    border-color: var(--validColor);
+}
+.form-content.notValid input {
+    border-color: var(--notValidColor);
+}
+
+.form-content small {
+color: var(--notValidColor);
+position: absolute;
+visibility: hidden;
+}
+
+.form-content.notValid small {
+    visibility: visible;
+}
+
+.form button {
+    cursor: pointer;
+    width: 50%;
+    background-color: rgb(211, 211, 211);
+    border-radius: 0px 10px 0px 10px;
+    border-color: 1px solid black;
+    font-weight: 1000;
+    width: 100%;
+    display: block;
+    padding: 10px
+
+}
+
+.form button:active {
+    background-color: black;
+}
